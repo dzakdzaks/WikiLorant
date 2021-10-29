@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4373683272C07F000A9FF92 /* WikiLorantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4373682272C07F000A9FF92 /* WikiLorantApp.swift */; };
+		A4373685272C07F000A9FF92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4373684272C07F000A9FF92 /* ContentView.swift */; };
+		A4373687272C07F100A9FF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4373686272C07F100A9FF92 /* Assets.xcassets */; };
+		A437368A272C07F100A9FF92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4373689272C07F100A9FF92 /* Preview Assets.xcassets */; };
+		A4373694272C07F100A9FF92 /* WikiLorantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4373693272C07F100A9FF92 /* WikiLorantTests.swift */; };
+		A437369E272C07F100A9FF92 /* WikiLorantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */; };
+		A43736A0272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */; };
+		A43736B2272C090800A9FF92 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43736B1272C090800A9FF92 /* Injection.swift */; };
+		A43736B6272C098700A9FF92 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B5272C098700A9FF92 /* Core */; };
+		A43736B8272C098A00A9FF92 /* Agent in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B7272C098A00A9FF92 /* Agent */; };
+		A43736BA272C098D00A9FF92 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B9272C098D00A9FF92 /* Home */; };
+		A43736BC272C099000A9FF92 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = A43736BB272C099000A9FF92 /* Favorite */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4373690272C07F100A9FF92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4373677272C07EF00A9FF92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A437367E272C07F000A9FF92;
+			remoteInfo = WikiLorant;
+		};
+		A437369A272C07F100A9FF92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4373677272C07EF00A9FF92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A437367E272C07F000A9FF92;
+			remoteInfo = WikiLorant;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A437367F272C07F000A9FF92 /* WikiLorant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiLorant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4373682272C07F000A9FF92 /* WikiLorantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantApp.swift; sourceTree = "<group>"; };
+		A4373684272C07F000A9FF92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4373686272C07F100A9FF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4373689272C07F100A9FF92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A437368F272C07F100A9FF92 /* WikiLorantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLorantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4373693272C07F100A9FF92 /* WikiLorantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantTests.swift; sourceTree = "<group>"; };
+		A4373699272C07F100A9FF92 /* WikiLorantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLorantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantUITests.swift; sourceTree = "<group>"; };
+		A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A43736AC272C081400A9FF92 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = ../Module/Core; sourceTree = "<group>"; };
+		A43736AD272C081C00A9FF92 /* Agent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Agent; path = ../Module/Agent; sourceTree = "<group>"; };
+		A43736AE272C082300A9FF92 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Module/Home; sourceTree = "<group>"; };
+		A43736AF272C082600A9FF92 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Favorite; path = ../Module/Favorite; sourceTree = "<group>"; };
+		A43736B1272C090800A9FF92 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A437367C272C07F000A9FF92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A43736BC272C099000A9FF92 /* Favorite in Frameworks */,
+				A43736B8272C098A00A9FF92 /* Agent in Frameworks */,
+				A43736B6272C098700A9FF92 /* Core in Frameworks */,
+				A43736BA272C098D00A9FF92 /* Home in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A437368C272C07F100A9FF92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4373696272C07F100A9FF92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4373676272C07EF00A9FF92 = {
+			isa = PBXGroup;
+			children = (
+				A43736AF272C082600A9FF92 /* Favorite */,
+				A43736AE272C082300A9FF92 /* Home */,
+				A43736AD272C081C00A9FF92 /* Agent */,
+				A43736AC272C081400A9FF92 /* Core */,
+				A4373681272C07F000A9FF92 /* WikiLorant */,
+				A4373692272C07F100A9FF92 /* WikiLorantTests */,
+				A437369C272C07F100A9FF92 /* WikiLorantUITests */,
+				A4373680272C07F000A9FF92 /* Products */,
+				A43736B4272C098700A9FF92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4373680272C07F000A9FF92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A437367F272C07F000A9FF92 /* WikiLorant.app */,
+				A437368F272C07F100A9FF92 /* WikiLorantTests.xctest */,
+				A4373699272C07F100A9FF92 /* WikiLorantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4373681272C07F000A9FF92 /* WikiLorant */ = {
+			isa = PBXGroup;
+			children = (
+				A43736B3272C091200A9FF92 /* App */,
+				A43736B0272C083B00A9FF92 /* DI */,
+				A4373686272C07F100A9FF92 /* Assets.xcassets */,
+				A4373688272C07F100A9FF92 /* Preview Content */,
+			);
+			path = WikiLorant;
+			sourceTree = "<group>";
+		};
+		A4373688272C07F100A9FF92 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4373689272C07F100A9FF92 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4373692272C07F100A9FF92 /* WikiLorantTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4373693272C07F100A9FF92 /* WikiLorantTests.swift */,
+			);
+			path = WikiLorantTests;
+			sourceTree = "<group>";
+		};
+		A437369C272C07F100A9FF92 /* WikiLorantUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */,
+				A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */,
+			);
+			path = WikiLorantUITests;
+			sourceTree = "<group>";
+		};
+		A43736B0272C083B00A9FF92 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A43736B1272C090800A9FF92 /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A43736B3272C091200A9FF92 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A4373682272C07F000A9FF92 /* WikiLorantApp.swift */,
+				A4373684272C07F000A9FF92 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A43736B4272C098700A9FF92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A437367E272C07F000A9FF92 /* WikiLorant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A43736A3272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorant" */;
+			buildPhases = (
+				A437367B272C07F000A9FF92 /* Sources */,
+				A437367C272C07F000A9FF92 /* Frameworks */,
+				A437367D272C07F000A9FF92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WikiLorant;
+			packageProductDependencies = (
+				A43736B5272C098700A9FF92 /* Core */,
+				A43736B7272C098A00A9FF92 /* Agent */,
+				A43736B9272C098D00A9FF92 /* Home */,
+				A43736BB272C099000A9FF92 /* Favorite */,
+			);
+			productName = WikiLorant;
+			productReference = A437367F272C07F000A9FF92 /* WikiLorant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A437368E272C07F100A9FF92 /* WikiLorantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A43736A6272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorantTests" */;
+			buildPhases = (
+				A437368B272C07F100A9FF92 /* Sources */,
+				A437368C272C07F100A9FF92 /* Frameworks */,
+				A437368D272C07F100A9FF92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4373691272C07F100A9FF92 /* PBXTargetDependency */,
+			);
+			name = WikiLorantTests;
+			productName = WikiLorantTests;
+			productReference = A437368F272C07F100A9FF92 /* WikiLorantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4373698272C07F100A9FF92 /* WikiLorantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A43736A9272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorantUITests" */;
+			buildPhases = (
+				A4373695272C07F100A9FF92 /* Sources */,
+				A4373696272C07F100A9FF92 /* Frameworks */,
+				A4373697272C07F100A9FF92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A437369B272C07F100A9FF92 /* PBXTargetDependency */,
+			);
+			name = WikiLorantUITests;
+			productName = WikiLorantUITests;
+			productReference = A4373699272C07F100A9FF92 /* WikiLorantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4373677272C07EF00A9FF92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					A437367E272C07F000A9FF92 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A437368E272C07F100A9FF92 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = A437367E272C07F000A9FF92;
+					};
+					A4373698272C07F100A9FF92 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = A437367E272C07F000A9FF92;
+					};
+				};
+			};
+			buildConfigurationList = A437367A272C07EF00A9FF92 /* Build configuration list for PBXProject "WikiLorant" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4373676272C07EF00A9FF92;
+			productRefGroup = A4373680272C07F000A9FF92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A437367E272C07F000A9FF92 /* WikiLorant */,
+				A437368E272C07F100A9FF92 /* WikiLorantTests */,
+				A4373698272C07F100A9FF92 /* WikiLorantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A437367D272C07F000A9FF92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A437368A272C07F100A9FF92 /* Preview Assets.xcassets in Resources */,
+				A4373687272C07F100A9FF92 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A437368D272C07F100A9FF92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4373697272C07F100A9FF92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A437367B272C07F000A9FF92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A43736B2272C090800A9FF92 /* Injection.swift in Sources */,
+				A4373685272C07F000A9FF92 /* ContentView.swift in Sources */,
+				A4373683272C07F000A9FF92 /* WikiLorantApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A437368B272C07F100A9FF92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4373694272C07F100A9FF92 /* WikiLorantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4373695272C07F100A9FF92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A43736A0272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift in Sources */,
+				A437369E272C07F100A9FF92 /* WikiLorantUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4373691272C07F100A9FF92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A437367E272C07F000A9FF92 /* WikiLorant */;
+			targetProxy = A4373690272C07F100A9FF92 /* PBXContainerItemProxy */;
+		};
+		A437369B272C07F100A9FF92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A437367E272C07F000A9FF92 /* WikiLorant */;
+			targetProxy = A437369A272C07F100A9FF92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A43736A1272C07F100A9FF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A43736A2272C07F100A9FF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A43736A4272C07F100A9FF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WikiLorant/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8KAH3Y36X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorants;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A43736A5272C07F100A9FF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WikiLorant/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8KAH3Y36X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorants;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A43736A7272C07F100A9FF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLorant.app/WikiLorant";
+			};
+			name = Debug;
+		};
+		A43736A8272C07F100A9FF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLorant.app/WikiLorant";
+			};
+			name = Release;
+		};
+		A43736AA272C07F100A9FF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorantUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WikiLorant;
+			};
+			name = Debug;
+		};
+		A43736AB272C07F100A9FF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorantUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WikiLorant;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A437367A272C07EF00A9FF92 /* Build configuration list for PBXProject "WikiLorant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A43736A1272C07F100A9FF92 /* Debug */,
+				A43736A2272C07F100A9FF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A43736A3272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A43736A4272C07F100A9FF92 /* Debug */,
+				A43736A5272C07F100A9FF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A43736A6272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A43736A7272C07F100A9FF92 /* Debug */,
+				A43736A8272C07F100A9FF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A43736A9272C07F100A9FF92 /* Build configuration list for PBXNativeTarget "WikiLorantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A43736AA272C07F100A9FF92 /* Debug */,
+				A43736AB272C07F100A9FF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A43736B5272C098700A9FF92 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		A43736B7272C098A00A9FF92 /* Agent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Agent;
+		};
+		A43736B9272C098D00A9FF92 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		A43736BB272C099000A9FF92 /* Favorite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Favorite;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A4373677272C07EF00A9FF92 /* Project object */;
+}
