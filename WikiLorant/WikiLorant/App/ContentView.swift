@@ -10,7 +10,7 @@ import Home
 import Favorite
 
 enum TabSelection {
-    case tab1, tab2, tab3
+    case tab1, tab2
 }
 
 struct ContentView: View {

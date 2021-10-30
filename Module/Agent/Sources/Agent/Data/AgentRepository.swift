@@ -58,6 +58,35 @@ Transformer.Domain == [AgentModel] {
     
 }
 
+public struct GetListAgentLocale<Locale: LocaleDataSource, Transformer: EntityToDomainMapper>: Repository
+where
+Locale.Request == (AgentEnum, String),
+Locale.Response == AgentEntity,
+Transformer.Entity == [AgentEntity],
+Transformer.Domain == [AgentModel] {
+    
+    public typealias Request = (AgentEnum, String)
+    public typealias Response = [AgentModel]
+    
+    private let locale: Locale
+    private let _mapper: Transformer
+    
+    public init(localeDataSource: Locale,
+                mapper: Transformer) {
+        
+        self.locale = localeDataSource
+        self._mapper = mapper
+        
+    }
+    
+    public func execute(request: (AgentEnum, String)) -> AnyPublisher<[AgentModel], Error> {
+        return self.locale.list(request: request)
+            .map { self._mapper.transformEntityToDomain(entity: $0)
+            }.eraseToAnyPublisher()
+    }
+    
+}
+
 public struct GetAgent<Locale: LocaleDataSource, Transformer: EntityToDomainMapper>: Repository
 where Locale.Request == String,
       Locale.Response == AgentEntity,

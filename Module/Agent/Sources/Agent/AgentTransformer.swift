@@ -68,6 +68,40 @@ public struct AgentListTransformer: Mapper {
     
 }
 
+public struct AgentListTransformerLocale: EntityToDomainMapper {
+    
+    public typealias Entity = [AgentEntity]
+    public typealias Domain = [AgentModel]
+    
+    public init() { }
+    
+    public func transformEntityToDomain(entity: [AgentEntity]) -> [AgentModel] {
+        return entity.map { result in
+            let roleModel = RoleModel(id: result.role?.id ?? "",
+                                      name: result.role?.name ?? "",
+                                      desc: result.role?.desc ?? "",
+                                      icon: result.role?.icon ?? "")
+            var abilitiesModel: [AbilityModel] = []
+            for element in result.abilities {
+                let abilityModel = AbilityModel(id: element.id,
+                                                slot: element.slot,
+                                                name: element.name,
+                                                desc: element.desc,
+                                                icon: element.icon)
+                abilitiesModel.append(abilityModel)
+            }
+            return AgentModel(id: result.id,
+                              name: result.name,
+                              desc: result.desc,
+                              halfImage: result.halfImage,
+                              fullImage: result.fullImage,
+                              role: roleModel,
+                              abilities: abilitiesModel)
+        }
+    }
+    
+}
+
 public struct AgentTransformer: EntityToDomainMapper {
     
     public typealias Entity = AgentEntity

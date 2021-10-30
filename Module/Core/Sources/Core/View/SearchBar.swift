@@ -94,6 +94,7 @@ struct SearchBar<ResultContent: View>: UIViewControllerRepresentable {
             searchController.searchBar.delegate = self
             searchController.searchBar.text = self.text
             searchController.searchBar.placeholder = placeholder
+            searchController.searchBar.autocapitalizationType = .none
         }
 
         func update(placeholder: String?, cancelClicked: @escaping () -> Void, searchClicked: @escaping () -> Void) {

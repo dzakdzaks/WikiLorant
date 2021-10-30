@@ -16,12 +16,15 @@ struct WikilorantApp: App {
         let injection = Injection()
         
         let getAgentUseCase: Interactor<(AgentEnum, String), [AgentModel], GetListAgent<GetAgentLocaleDataSource, GetAgentRemoteDataSource, AgentListTransformer>> = injection.provideGetAgent()
+        let getAgentLocaleUseCase: Interactor<(AgentEnum, String), [AgentModel], GetListAgentLocale<GetAgentLocaleDataSource, AgentListTransformerLocale>> = injection.provideGetAgentLocale()
         
         let getAgentPresenter = GetListPresenter(useCase: getAgentUseCase)
+        let getAgentLocalePresenter = GetListPresenter(useCase: getAgentLocaleUseCase)
         
         WindowGroup {
             ContentView()
                 .environmentObject(getAgentPresenter)
+                .environmentObject(getAgentLocalePresenter)
         }
     }
 }

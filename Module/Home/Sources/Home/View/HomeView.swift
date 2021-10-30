@@ -31,12 +31,26 @@ public struct HomeView: View {
                         ProgressView()
                     }
                 } else {
-                    ScrollView(.vertical, showsIndicators: true) {
-                        VStack {
-                            if presenter.list.isEmpty {
-                                Spacer()
-                                Text(presenter.errorMessage)
-                            } else {
+                    VStack {
+                        if presenter.list.isEmpty {
+                            GeometryReader { geometry in
+                                ScrollView {
+                                    VStack {
+                                        Spacer()
+                                        if searchKey.isEmpty {
+                                            Text("There is no agent here")
+                                        } else {
+                                            Text("There is no agent with key '\(searchKey)'")
+                                        }
+                                        Spacer()
+                                    }
+                                    .padding()
+                                    .frame(width: geometry.size.width)
+                                    .frame(minHeight: geometry.size.height)
+                                }
+                            }
+                        } else {
+                            ScrollView(.vertical, showsIndicators: true) {
                                 LazyVGrid(columns: gridItemLayout) {
                                     ForEach(presenter.list, id: \.id) { agent in
                                         ZStack {
@@ -50,13 +64,13 @@ public struct HomeView: View {
                 }
             }
             .navigationTitle("Home")
-            .navigationBarSearch($searchKey, hidesSearchBarWhenScrolling: false, onTextChange: { result in
+            .navigationBarSearch($searchKey, placeholder: "Search Agent", hidesSearchBarWhenScrolling: false, onTextChange: { result in
                 presenter.getList(request: (AgentEnum.all, result))
             }, cancelClicked: {
                 presenter.getList(request: (AgentEnum.all, ""))
             })
         }.onAppear {
-            presenter.getList(request: (AgentEnum.all, ""))
+            presenter.getList(request: (AgentEnum.all, searchKey))
         }
     }
     

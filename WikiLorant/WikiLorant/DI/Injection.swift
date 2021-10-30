@@ -12,9 +12,14 @@ import Agent
 
 final class Injection: NSObject {
     
+    let realm: Realm
+    
+    override init() {
+        self.realm = try! Realm()
+    }
+    
     func provideGetAgent<U: UseCase>() -> U
     where U.Request == (AgentEnum, String), U.Response == [AgentModel] {
-        let realm = try! Realm()
         let locale = GetAgentLocaleDataSource(realm: realm)
         let remote = GetAgentRemoteDataSource()
         let mapper = AgentListTransformer()
@@ -22,6 +27,18 @@ final class Injection: NSObject {
         let repository = GetListAgent(
             localeDataSource: locale,
             remoteDataSource: remote,
+            mapper: mapper)
+        
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideGetAgentLocale<U: UseCase>() -> U
+    where U.Request == (AgentEnum, String), U.Response == [AgentModel] {
+        let locale = GetAgentLocaleDataSource(realm: realm)
+        let mapper = AgentListTransformerLocale()
+        
+        let repository = GetListAgentLocale(
+            localeDataSource: locale,
             mapper: mapper)
         
         return Interactor(repository: repository) as! U
