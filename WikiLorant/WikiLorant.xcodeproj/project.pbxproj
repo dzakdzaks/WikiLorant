@@ -19,6 +19,8 @@
 		A43736B8272C098A00A9FF92 /* Agent in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B7272C098A00A9FF92 /* Agent */; };
 		A43736BA272C098D00A9FF92 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B9272C098D00A9FF92 /* Home */; };
 		A43736BC272C099000A9FF92 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = A43736BB272C099000A9FF92 /* Favorite */; };
+		A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = A4E4CFFB272D94CF00BBF474 /* Profile */; };
+		A4E4D005272E575400BBF474 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4D004272E575400BBF474 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		A43736AE272C082300A9FF92 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Module/Home; sourceTree = "<group>"; };
 		A43736AF272C082600A9FF92 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Favorite; path = ../Module/Favorite; sourceTree = "<group>"; };
 		A43736B1272C090800A9FF92 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		A4E4CFFA272D939100BBF474 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Profile; path = ../Module/Profile; sourceTree = "<group>"; };
+		A4E4D003272E56CF00BBF474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4E4D004272E575400BBF474 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 				A43736BC272C099000A9FF92 /* Favorite in Frameworks */,
 				A43736B8272C098A00A9FF92 /* Agent in Frameworks */,
 				A43736B6272C098700A9FF92 /* Core in Frameworks */,
+				A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */,
 				A43736BA272C098D00A9FF92 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +94,7 @@
 		A4373676272C07EF00A9FF92 = {
 			isa = PBXGroup;
 			children = (
+				A4E4CFFA272D939100BBF474 /* Profile */,
 				A43736AF272C082600A9FF92 /* Favorite */,
 				A43736AE272C082300A9FF92 /* Home */,
 				A43736AD272C081C00A9FF92 /* Agent */,
@@ -113,8 +120,9 @@
 		A4373681272C07F000A9FF92 /* WikiLorant */ = {
 			isa = PBXGroup;
 			children = (
+				A4E4D003272E56CF00BBF474 /* Info.plist */,
 				A43736B3272C091200A9FF92 /* App */,
-				A43736B0272C083B00A9FF92 /* DI */,
+				A4E4CFF5272D8BFF00BBF474 /* Core */,
 				A4373686272C07F100A9FF92 /* Assets.xcassets */,
 				A4373688272C07F100A9FF92 /* Preview Content */,
 			);
@@ -159,6 +167,7 @@
 			children = (
 				A4373682272C07F000A9FF92 /* WikiLorantApp.swift */,
 				A4373684272C07F000A9FF92 /* ContentView.swift */,
+				A4E4D004272E575400BBF474 /* Launch Screen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -168,6 +177,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4E4CFF5272D8BFF00BBF474 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CFF6272D8C0F00BBF474 /* Router */,
+				A43736B0272C083B00A9FF92 /* DI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A4E4CFF6272D8C0F00BBF474 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +205,7 @@
 				A437367B272C07F000A9FF92 /* Sources */,
 				A437367C272C07F000A9FF92 /* Frameworks */,
 				A437367D272C07F000A9FF92 /* Resources */,
+				A4E4D000272E4F9500BBF474 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -191,6 +217,7 @@
 				A43736B7272C098A00A9FF92 /* Agent */,
 				A43736B9272C098D00A9FF92 /* Home */,
 				A43736BB272C099000A9FF92 /* Favorite */,
+				A4E4CFFB272D94CF00BBF474 /* Profile */,
 			);
 			productName = WikiLorant;
 			productReference = A437367F272C07F000A9FF92 /* WikiLorant.app */;
@@ -280,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E4D005272E575400BBF474 /* Launch Screen.storyboard in Resources */,
 				A437368A272C07F100A9FF92 /* Preview Assets.xcassets in Resources */,
 				A4373687272C07F100A9FF92 /* Assets.xcassets in Resources */,
 			);
@@ -300,6 +328,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4E4D000272E4F9500BBF474 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A437367B272C07F000A9FF92 /* Sources */ = {
@@ -466,15 +515,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WikiLorant/Preview Content\"";
 				DEVELOPMENT_TEAM = Y8KAH3Y36X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WikiLorant/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -482,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -496,15 +549,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WikiLorant/Preview Content\"";
 				DEVELOPMENT_TEAM = Y8KAH3Y36X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WikiLorant/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -512,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzakdzaks.WikiLorants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -670,6 +727,10 @@
 		A43736BB272C099000A9FF92 /* Favorite */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Favorite;
+		};
+		A4E4CFFB272D94CF00BBF474 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
