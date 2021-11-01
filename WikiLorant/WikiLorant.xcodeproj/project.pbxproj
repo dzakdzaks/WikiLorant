@@ -720,7 +720,7 @@
 			repositoryURL = "https://github.com/dzakdzaks/CorePackage.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.1;
+				version = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
