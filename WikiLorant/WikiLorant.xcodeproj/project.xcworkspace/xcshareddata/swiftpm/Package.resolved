@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Core",
+        "repositoryURL": "https://github.com/dzakdzaks/CorePackage.git",
+        "state": {
+          "branch": null,
+          "revision": "df7b0cf049b5007dc147840517db455838209dad",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "Realm",
         "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
