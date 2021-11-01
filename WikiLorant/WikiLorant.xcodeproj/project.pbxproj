@@ -18,6 +18,7 @@
 		A43736BA272C098D00A9FF92 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B9272C098D00A9FF92 /* Home */; };
 		A43736BC272C099000A9FF92 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = A43736BB272C099000A9FF92 /* Favorite */; };
 		A47B3495272E7A3B00FBCD7D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B3494272E7A3B00FBCD7D /* Router.swift */; };
+		A4AC69BF272FDDFA00DA2780 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A4AC69BE272FDDFA00DA2780 /* Core */; };
 		A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = A4E4CFFB272D94CF00BBF474 /* Profile */; };
 		A4E4D005272E575400BBF474 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4D004272E575400BBF474 /* Launch Screen.storyboard */; };
 		A4E4D008272E614500BBF474 /* DetailAgent in Frameworks */ = {isa = PBXBuildFile; productRef = A4E4D007272E614500BBF474 /* DetailAgent */; };
@@ -70,6 +71,7 @@
 				A43736BC272C099000A9FF92 /* Favorite in Frameworks */,
 				A4E4D008272E614500BBF474 /* DetailAgent in Frameworks */,
 				A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */,
+				A4AC69BF272FDDFA00DA2780 /* Core in Frameworks */,
 				A43736BA272C098D00A9FF92 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +212,7 @@
 				A43736BB272C099000A9FF92 /* Favorite */,
 				A4E4CFFB272D94CF00BBF474 /* Profile */,
 				A4E4D007272E614500BBF474 /* DetailAgent */,
+				A4AC69BE272FDDFA00DA2780 /* Core */,
 			);
 			productName = WikiLorant;
 			productReference = A437367F272C07F000A9FF92 /* WikiLorant.app */;
@@ -283,6 +286,9 @@
 				Base,
 			);
 			mainGroup = A4373676272C07EF00A9FF92;
+			packageReferences = (
+				A4AC69BD272FDDFA00DA2780 /* XCRemoteSwiftPackageReference "CorePackage" */,
+			);
 			productRefGroup = A4373680272C07F000A9FF92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -708,6 +714,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A4AC69BD272FDDFA00DA2780 /* XCRemoteSwiftPackageReference "CorePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dzakdzaks/CorePackage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		A43736B9272C098D00A9FF92 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -716,6 +733,11 @@
 		A43736BB272C099000A9FF92 /* Favorite */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Favorite;
+		};
+		A4AC69BE272FDDFA00DA2780 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4AC69BD272FDDFA00DA2780 /* XCRemoteSwiftPackageReference "CorePackage" */;
+			productName = Core;
 		};
 		A4E4CFFB272D94CF00BBF474 /* Profile */ = {
 			isa = XCSwiftPackageProductDependency;
