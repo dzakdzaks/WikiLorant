@@ -8,8 +8,8 @@
 import Foundation
 
 public struct AgentsResponse: Decodable {
-    let status: Int
-    let agents: [AgentResponse]
+    public let status: Int
+    public let agents: [AgentResponse]
     private enum CodingKeys: String, CodingKey {
         case status
         case agents = "data"
@@ -17,13 +17,26 @@ public struct AgentsResponse: Decodable {
 }
 
 public struct AgentResponse: Decodable {
-    let id: String?
-    let name: String?
-    let desc: String?
-    let halfImage: String?
-    let fullImage: String?
-    let role: RoleResponse?
-    let abilities: [AbilityResponse]
+    public let id: String?
+    public let name: String?
+    public let desc: String?
+    public let halfImage: String?
+    public let fullImage: String?
+    public let role: RoleResponse?
+    public let abilities: [AbilityResponse]
+    
+    public init(id: String, name: String, desc: String,
+                halfImage: String, fullImage: String,
+                role: RoleResponse?, abilities: [AbilityResponse]?) {
+        self.id = id
+        self.name = name
+        self.desc = desc
+        self.halfImage = halfImage
+        self.fullImage = fullImage
+        self.role = role
+        self.abilities = abilities ?? []
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case id = "uuid"
         case name = "displayName"
