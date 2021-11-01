@@ -37,4 +37,4 @@ jobs:
      - name: Run a multi-line script
        run: |
           cd WikiLorant
-          xcodebuild test -workspace ProjectSource.xcworkspace -scheme WikiLorant -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0"
+          xcodebuild test -project WikiLorant.xcodeproj -scheme WikiLorant -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0"
