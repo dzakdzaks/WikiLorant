@@ -76,7 +76,9 @@ public struct HomeView<DetailRoute: View>: View {
                 presenter.getList(request: (AgentEnum.all, ""))
             })
         }.onAppear {
-            presenter.getList(request: (AgentEnum.all, searchKey))
+            if (presenter.list.isEmpty) {
+                presenter.getList(request: (AgentEnum.all, searchKey))
+            }
         }
     }
     

@@ -69,6 +69,9 @@ public struct FavoriteView<DetailRoute: View>: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) { refreshButton }
+            }
             .navigationTitle("Favorite")
             .navigationBarSearch($searchKey, placeholder: "Search Favorite Agent", hidesSearchBarWhenScrolling: false, onTextChange: { result in
                 presenter.getList(request: (AgentEnum.favorite, result))
@@ -76,9 +79,30 @@ public struct FavoriteView<DetailRoute: View>: View {
                 presenter.getList(request: (AgentEnum.favorite, ""))
             })
         }.onAppear {
-            presenter.getList(request: (AgentEnum.favorite, searchKey))
+            presenter.checkIfThereAnyNewData(request: (AgentEnum.favorite, searchKey))
         }
     }
     
 }
 
+extension FavoriteView {
+    
+    var refreshButton: some View {
+        Button(action: {
+            presenter.checkIfThereAnyNewData(request: (AgentEnum.favorite, searchKey))
+        }) {
+            Image(systemName: "arrow.clockwise")
+                .aspectRatio(contentMode: .fit)
+        }
+    }
+    
+    var deleteButton: some View {
+        Button(action: {
+            
+        }) {
+            Image(systemName: "trash.fill")
+                .aspectRatio(contentMode: .fit)
+        }
+    }
+    
+}
