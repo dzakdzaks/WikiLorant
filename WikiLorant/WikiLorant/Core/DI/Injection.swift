@@ -44,4 +44,32 @@ final class Injection: NSObject {
         return Interactor(repository: repository) as! U
     }
     
+    func provideGetDetailAgentLocale<U: UseCase>() -> U
+    where U.Request == String, U.Response == AgentModel {
+        let locale = GetAgentLocaleDataSource(realm: realm)
+        let mapper = AgentTransformer()
+        
+        let repository = GetAgent(
+            localeDataSource: locale,
+            mapper: mapper)
+        
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideIsAgentFavorite<U: UseCase>() -> U
+    where U.Request == String, U.Response == Bool {
+        let locale = GetAgentLocaleDataSource(realm: realm)
+        let repository = IsAgentFavorite(locale: locale)
+        
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideUpdateAgentFavorite<U: UseCase>() -> U
+    where U.Request == (String, UpdateEnum), U.Response == Bool {
+        let locale = GetAgentLocaleDataSource(realm: realm)
+        let repository = UpdateAgentFavorite(locale: locale)
+        
+        return Interactor(repository: repository) as! U
+    }
+    
 }

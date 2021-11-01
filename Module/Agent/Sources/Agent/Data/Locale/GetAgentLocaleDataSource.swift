@@ -102,18 +102,16 @@ public struct GetAgentLocaleDataSource: LocaleDataSource {
         }.eraseToAnyPublisher()
     }
     
-    public func update(request: (String, String)) -> AnyPublisher<Bool, Error> {
+    public func update(request: (String, UpdateEnum)) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             let agent = self._realm.object(ofType: AgentEntity.self, forPrimaryKey: request.0)
             do {
                 try self._realm.write {
                     switch request.1 {
-                    case "add":
+                    case .add:
                         agent?.isFavorite = true
-                    case "remove":
+                    case .remove:
                         agent?.isFavorite = false
-                    default:
-                        break
                     }
                     completion(.success(true))
                 }

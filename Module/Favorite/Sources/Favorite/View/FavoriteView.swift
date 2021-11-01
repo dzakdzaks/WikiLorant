@@ -9,7 +9,7 @@ import SwiftUI
 import Core
 import Agent
 
-public struct FavoriteView: View {
+public struct FavoriteView<DetailRoute: View>: View {
     
     @EnvironmentObject
     var presenter: GetListPresenter<
@@ -20,7 +20,11 @@ public struct FavoriteView: View {
     
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
-    public init() {}
+    let detailRoute: ((_ id: String) -> DetailRoute)
+    
+    public init(detailRoute: @escaping ((String) -> DetailRoute)) {
+        self.detailRoute = detailRoute
+    }
     
     public var body: some View {
         NavigationView {
@@ -54,7 +58,9 @@ public struct FavoriteView: View {
                                 LazyVGrid(columns: gridItemLayout) {
                                     ForEach(presenter.list, id: \.id) { agent in
                                         ZStack {
-                                            AgentRow(agent: agent)
+                                            NavigationLink(destination: self.detailRoute(agent.id)) {
+                                                AgentRow(agent: agent)
+                                            }.buttonStyle(PlainButtonStyle())
                                         }.padding(8)
                                     }
                                 }
@@ -76,8 +82,3 @@ public struct FavoriteView: View {
     
 }
 
-struct FavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteView()
-    }
-}

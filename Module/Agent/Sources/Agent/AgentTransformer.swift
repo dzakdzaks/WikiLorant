@@ -61,6 +61,7 @@ public struct AgentListTransformer: Mapper {
                               desc: result.desc,
                               halfImage: result.halfImage,
                               fullImage: result.fullImage,
+                              isFavorite: result.isFavorite,
                               role: roleModel,
                               abilities: abilitiesModel)
         }
@@ -95,6 +96,7 @@ public struct AgentListTransformerLocale: EntityToDomainMapper {
                               desc: result.desc,
                               halfImage: result.halfImage,
                               fullImage: result.fullImage,
+                              isFavorite: result.isFavorite,
                               role: roleModel,
                               abilities: abilitiesModel)
         }
@@ -129,6 +131,7 @@ public struct AgentTransformer: EntityToDomainMapper {
                           desc: entity.desc,
                           halfImage: entity.halfImage,
                           fullImage: entity.fullImage,
+                          isFavorite: entity.isFavorite,
                           role: roleModel,
                           abilities: abilitiesModel)
     }

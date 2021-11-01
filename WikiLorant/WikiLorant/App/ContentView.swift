@@ -9,6 +9,7 @@ import SwiftUI
 import Home
 import Favorite
 import Profile
+import DetailAgent
 
 enum TabSelection {
     case tab1, tab2, tab3
@@ -22,6 +23,8 @@ struct ContentView: View {
 
 struct TabMain: View {
     
+    let router = Router()
+
     @State
     private var selection: TabSelection = .tab1
     
@@ -33,14 +36,18 @@ struct TabMain: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            HomeView()
+            HomeView<DetailAgentView>(detailRoute: { id in
+                router.routeToDetail(for: id)
+            })
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
                 .tag(TabSelection.tab1)
             
-            FavoriteView()
+            FavoriteView<DetailAgentView>(detailRoute: { id in
+                router.routeToDetail(for: id)
+            })
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Favorite")
@@ -70,7 +77,7 @@ struct TabMain: View {
             showSheet = false
             selection = oldselection
         }) {
-            ProfileView()
+            router.routeToProfile()
         }
     }
 }

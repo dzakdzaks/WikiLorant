@@ -88,7 +88,7 @@ Transformer.Domain == [AgentModel] {
 }
 
 public struct GetAgent<Locale: LocaleDataSource, Transformer: EntityToDomainMapper>: Repository
-where Locale.Request == String,
+where Locale.Request == (AgentEnum, String),
       Locale.Response == AgentEntity,
       Transformer.Entity == AgentEntity,
       Transformer.Domain == AgentModel {
@@ -115,8 +115,8 @@ where Locale.Request == String,
 }
 
 public struct IsAgentFavorite<Locale: LocaleDataSource>: Repository
-where Locale.Request == String,
-      Locale.Response == Bool {
+where Locale.Request == (AgentEnum, String),
+      Locale.Response == AgentEntity {
     
     public typealias Request = String
     public typealias Response = Bool
@@ -134,10 +134,10 @@ where Locale.Request == String,
 }
 
 public struct UpdateAgentFavorite<Locale: LocaleDataSource>: Repository
-where Locale.Request == (String, String),
-      Locale.Response == Bool {
+where Locale.Request == (AgentEnum, String),
+      Locale.Response == AgentEntity {
     
-    public typealias Request = (String, String)
+    public typealias Request = (String, UpdateEnum)
     public typealias Response = Bool
     
     private let locale: Locale
@@ -146,7 +146,7 @@ where Locale.Request == (String, String),
         self.locale = locale
     }
     
-    public func execute(request: (String, String)) -> AnyPublisher<Bool, Error> {
+    public func execute(request: (String, UpdateEnum)) -> AnyPublisher<Bool, Error> {
         return self.locale.update(request: request)
             .eraseToAnyPublisher()
     }

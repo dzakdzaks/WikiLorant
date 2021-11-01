@@ -19,8 +19,10 @@
 		A43736B8272C098A00A9FF92 /* Agent in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B7272C098A00A9FF92 /* Agent */; };
 		A43736BA272C098D00A9FF92 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B9272C098D00A9FF92 /* Home */; };
 		A43736BC272C099000A9FF92 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = A43736BB272C099000A9FF92 /* Favorite */; };
+		A47B3495272E7A3B00FBCD7D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B3494272E7A3B00FBCD7D /* Router.swift */; };
 		A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = A4E4CFFB272D94CF00BBF474 /* Profile */; };
 		A4E4D005272E575400BBF474 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4D004272E575400BBF474 /* Launch Screen.storyboard */; };
+		A4E4D008272E614500BBF474 /* DetailAgent in Frameworks */ = {isa = PBXBuildFile; productRef = A4E4D007272E614500BBF474 /* DetailAgent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +58,11 @@
 		A43736AE272C082300A9FF92 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Module/Home; sourceTree = "<group>"; };
 		A43736AF272C082600A9FF92 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Favorite; path = ../Module/Favorite; sourceTree = "<group>"; };
 		A43736B1272C090800A9FF92 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		A47B3494272E7A3B00FBCD7D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A4E4CFFA272D939100BBF474 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Profile; path = ../Module/Profile; sourceTree = "<group>"; };
 		A4E4D003272E56CF00BBF474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A4E4D004272E575400BBF474 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A4E4D006272E610E00BBF474 /* DetailAgent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DetailAgent; path = ../Module/DetailAgent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				A43736BC272C099000A9FF92 /* Favorite in Frameworks */,
 				A43736B8272C098A00A9FF92 /* Agent in Frameworks */,
 				A43736B6272C098700A9FF92 /* Core in Frameworks */,
+				A4E4D008272E614500BBF474 /* DetailAgent in Frameworks */,
 				A4E4CFFC272D94CF00BBF474 /* Profile in Frameworks */,
 				A43736BA272C098D00A9FF92 /* Home in Frameworks */,
 			);
@@ -94,6 +99,7 @@
 		A4373676272C07EF00A9FF92 = {
 			isa = PBXGroup;
 			children = (
+				A4E4D006272E610E00BBF474 /* DetailAgent */,
 				A4E4CFFA272D939100BBF474 /* Profile */,
 				A43736AF272C082600A9FF92 /* Favorite */,
 				A43736AE272C082300A9FF92 /* Home */,
@@ -191,6 +197,7 @@
 		A4E4CFF6272D8C0F00BBF474 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A47B3494272E7A3B00FBCD7D /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 				A43736B9272C098D00A9FF92 /* Home */,
 				A43736BB272C099000A9FF92 /* Favorite */,
 				A4E4CFFB272D94CF00BBF474 /* Profile */,
+				A4E4D007272E614500BBF474 /* DetailAgent */,
 			);
 			productName = WikiLorant;
 			productReference = A437367F272C07F000A9FF92 /* WikiLorant.app */;
@@ -355,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47B3495272E7A3B00FBCD7D /* Router.swift in Sources */,
 				A43736B2272C090800A9FF92 /* Injection.swift in Sources */,
 				A4373685272C07F000A9FF92 /* ContentView.swift in Sources */,
 				A4373683272C07F000A9FF92 /* WikiLorantApp.swift in Sources */,
@@ -731,6 +740,10 @@
 		A4E4CFFB272D94CF00BBF474 /* Profile */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Profile;
+		};
+		A4E4D007272E614500BBF474 /* DetailAgent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DetailAgent;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

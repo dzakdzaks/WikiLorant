@@ -13,6 +13,7 @@ public struct AgentModel: Equatable, Identifiable {
     public let desc: String
     public let halfImage: String
     public let fullImage: String
+    public let isFavorite: Bool
     public let role: RoleModel?
     public let abilities: [AbilityModel]
 }
