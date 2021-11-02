@@ -13,7 +13,6 @@
 		A437368A272C07F100A9FF92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4373689272C07F100A9FF92 /* Preview Assets.xcassets */; };
 		A4373694272C07F100A9FF92 /* RemoteDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4373693272C07F100A9FF92 /* RemoteDataSourceTest.swift */; };
 		A437369E272C07F100A9FF92 /* WikiLorantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */; };
-		A43736A0272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */; };
 		A43736B2272C090800A9FF92 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43736B1272C090800A9FF92 /* Injection.swift */; };
 		A43736BA272C098D00A9FF92 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A43736B9272C098D00A9FF92 /* Home */; };
 		A43736BC272C099000A9FF92 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = A43736BB272C099000A9FF92 /* Favorite */; };
@@ -51,7 +50,6 @@
 		A4373693272C07F100A9FF92 /* RemoteDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceTest.swift; sourceTree = "<group>"; };
 		A4373699272C07F100A9FF92 /* WikiLorantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLorantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantUITests.swift; sourceTree = "<group>"; };
-		A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLorantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A43736AE272C082300A9FF92 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Module/Home; sourceTree = "<group>"; };
 		A43736AF272C082600A9FF92 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Favorite; path = ../Module/Favorite; sourceTree = "<group>"; };
 		A43736B1272C090800A9FF92 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				A437369D272C07F100A9FF92 /* WikiLorantUITests.swift */,
-				A437369F272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift */,
 			);
 			path = WikiLorantUITests;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43736A0272C07F100A9FF92 /* WikiLorantUITestsLaunchTests.swift in Sources */,
 				A437369E272C07F100A9FF92 /* WikiLorantUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
